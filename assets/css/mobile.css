@@ -75,7 +75,6 @@ button.hamburger {
 }
 
 .nav-item {
-    /*margin-left: 5rem;*/
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -100,8 +99,6 @@ button.hamburger {
 .nav-link:hover {
     color: var( --color-clear );
 }
-
-
 
 .nav-item:hover > a {
     color: var( --color-secondary );
@@ -316,8 +313,6 @@ p {
 }
 
 #precios > .container > .paquete {
-    /*border-radius: 16px;*/
-    /*padding: 1rem;*/
     color: white;
     text-align: center;
     display: flex;
@@ -367,7 +362,6 @@ p {
 }
 
 #precios > .container > .paquete > .paquete-body > span {
-    /*margin: unset;*/
     font-size: 1.2em;
 }
 

@@ -69,7 +69,6 @@
 
     .hero-caption-top {
         color: white;
-        /*margin-right: 10%;*/
         margin-left: 3rem;
         margin-right: 3rem;
         order: unset;
@@ -223,7 +222,7 @@
     #menudigital > .container {
         flex-direction: row;
         justify-content: center;
-        flex-wrap: wrap;/* Cambiar a wrap */
+        flex-wrap: wrap;
         width: 85%;
         max-width: 1200px;
     }
@@ -247,9 +246,6 @@
         width: 15rem;
         height: 5rem;
     }
-
-    /* Contacto */
-
 
     /* Footer */
     footer > .container {

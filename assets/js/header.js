@@ -33,7 +33,6 @@ const closeMenu = () => {
 const toggleNavbar = () => {
 
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
     
     if( currentScroll > lastScroll ) {
         //navBar.style.display='none'
@@ -44,7 +43,6 @@ const toggleNavbar = () => {
     }
 
     lastScroll = currentScroll <= 0 ? 0 : currentScroll
-
 
 }
 

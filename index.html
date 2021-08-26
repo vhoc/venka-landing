@@ -409,7 +409,29 @@
 
             <div class="container">
 
-                
+                <!-- Easy Forms -->
+                <div id="c40">
+                    Llena mi <a href="https://waxyform.com/app/app/form?id=40">formulario en línea</a>.
+                </div>
+                <script type="text/javascript">
+                    (function(d, t) {
+                        var s = d.createElement(t), options = {
+                            'id': 40,
+                            'theme': 0,
+                            'container': 'c40',
+                            'height': '653px',
+                            'form': '//waxyform.com/app/app/embed'
+                        };
+                        s.type= 'text/javascript';
+                        s.src = 'https://waxyform.com/app/static_files/js/form.widget.js';
+                        s.onload = s.onreadystatechange = function() {
+                            var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+                            try { (new EasyForms()).initialize(options).display() } catch (e) { }
+                        };
+                        var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+                    })(document, 'script');
+                </script>
+                <!-- End Easy Forms -->
 
             </div>
 

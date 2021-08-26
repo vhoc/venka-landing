@@ -1,3 +1,3 @@
 # Venka Landing Page
 
-Responsive excercise made wiht pure HTML, CSS and Javascript.
+Responsive excercise made with pure HTML, CSS and Javascript.

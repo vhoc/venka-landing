@@ -1,0 +1,557 @@
+/* Navigation */
+button.hamburger {
+    border: none;
+    background: none;
+    display: block;
+    cursor: pointer;
+}
+
+.header {
+    width: 100%;    
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1000;
+    -webkit-box-shadow: 0px 4px 11px -4px #000000; 
+    box-shadow: 0px 4px 11px -4px #000000;
+}
+
+.header > .navbar > a {
+    height: 100px;/* I don't like this solution */
+    display: flex;
+}
+
+.header > .navbar > a > img {
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+
+    width: 100%;
+    height: auto;
+    padding-right: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;    
+    position: sticky;
+    top: 0;
+    
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #303030;
+    border-radius: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    position: fixed;
+    left: -100%;
+    top: 100px;
+    flex-direction: column;
+    background-color: rgba( 250, 250, 250, 1 );
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    transition: 0.3;
+    box-shadow: 0 10px 27px rgba( 0, 0, 0, 0.05 );
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-item {
+    /*margin-left: 5rem;*/
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+
+    margin: 0;
+    height: 6rem;
+    justify-content: flex-end;
+    padding-right: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #475569;
+    width: max-content;
+    
+    margin-top: auto;
+    margin-bottom: auto;
+    align-content: center;
+}
+
+.nav-link:hover {
+    color: var( --color-clear );
+}
+
+
+
+.nav-item:hover > a {
+    color: var( --color-secondary );
+}
+
+/* Fancy animation starts here */
+.hamburger.active .bar:nth-child( 2 ) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child( 1 ) {
+    transform: translateY( 8px ) rotate( 45deg );
+}
+
+.hamburger.active .bar:nth-child( 3 ) {
+    transform: translateY( -8px ) rotate( -45deg );
+}
+/* Fancy animation ends here */
+
+/* Hero */
+#hero > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url( "../img/jumbotron_768.webp" );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    padding: 3rem 1rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-phone {
+    display: none;
+    width: 67%;
+}
+
+.hero-phone-mobile {
+    width: 67%;
+}
+
+.hero-column-captions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hero-caption-top {
+    color: white;
+    order: 0;
+    text-align: center;
+    padding-bottom: 10%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.hero-caption-top h1 {
+    text-shadow: 1px 1px 10px #000;
+    margin-bottom: 4%;
+    font-size: 2.5rem;
+}
+
+.hero-caption-top span {
+    text-shadow: 1px 1px 5px #000;
+    font-size: 1.3rem;
+}
+
+
+.hero-caption-bottom-mobile {
+    order: 3;
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.hero-caption-bottom-mobile img {
+    width: 30%;
+}
+
+.icono-informacion {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 40%;
+}
+
+.hero-content .hero-phone-caption {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.intro {
+    background: url( "../img/bg-intro.svg" );
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.intro:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Informacion */
+#informacion > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.jumbotron {
+    background:
+        linear-gradient(308deg, rgba(25, 44, 75, 0.8) 0%, rgba(85, 124, 45, 0.8) 100%),
+        url( "../img/parallax-informacion.webp" );
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white !important;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+    text-align: left;
+}
+
+.jumbotron h1 {
+    font-size: 2.5rem;
+}
+
+.jumbotron p {
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.info p {
+    font-size: 1.2rem;
+}
+
+.info, .info-controlperiodos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+
+.info-controlperiodos {
+    padding-right: 10%;
+}
+
+.info-controlperiodos p {
+    font-size: 1.2rem;
+}
+
+.info-images {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba( 47, 83, 141, 0.5 );
+}
+
+.info-controlperiodos > img {
+    margin-bottom: 0px;
+    border-radius: 0px 0px 12px 12px;
+    max-width: 500px;
+}
+
+/* Precios */
+.jumbotron-precios {
+    background:
+    linear-gradient(308deg, rgba(25, 44, 75, 0.8) 0%, rgba(85, 124, 45, 0.8) 100%),
+        url( "../img/parallax-precios.webp" );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#precios > .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#precios > .container > .paquete {
+    /*border-radius: 16px;*/
+    /*padding: 1rem;*/
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 62%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#precios > .container > .paquete > .paquete-header {
+    background: linear-gradient(174deg, rgba(136,199,71,1) 0%, rgba(47,83,141,1) 100%);
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+#precios > .container > .paquete > .paquete-header.paquete-header-1 {
+    background: var( --color-primary );
+}
+
+#precios > .container > .paquete > .paquete-header.paquete-header-2 {
+    background: var( --color-secondary );
+}
+
+#precios > .container > .paquete > .paquete-header.paquete-header-3 {
+    background: linear-gradient(97deg, #2f538d, #88c747);
+    background-size: 400% 400%;
+
+    -webkit-animation: paqueteHeader3BgAnim 2s ease infinite;
+    -moz-animation: paqueteHeader3BgAnim 2s ease infinite;
+    animation: paqueteHeader3BgAnim 2s ease infinite;
+}
+
+#precios > .container > .paquete > .paquete-body {
+    border: 1px solid lightgray;
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var( --color-dark );
+    list-style: initial;
+}
+
+#precios > .container > .paquete > .paquete-body > * {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+#precios > .container > .paquete > .paquete-body > span {
+    /*margin: unset;*/
+    font-size: 1.2em;
+}
+
+#precios > .container > .paquete > .paquete-body > span.spacer {
+    display: none;
+}
+
+#precios > .container > .paquete > .paquete-body > span.paquete-incluye {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: unset;
+}
+
+.paquete-header > h1 {
+    font-size: 2em;
+}
+
+.paquete-precio {
+    font-size: 3em;
+}
+
+#precios > .container > .paquete > .paquete-body > .paquete-accion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.btn.btn-contratar {
+    border: unset;
+    background: var( --gradient-primary );
+    padding-top: 0.62rem;
+    padding-bottom: 0.62rem;
+    padding-left: 1.62rem;
+    padding-right: 1.62rem;
+    border-radius: unset;
+    border-radius: 20%/50%;
+    font-weight: 700;
+    color: white;
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.88); 
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.88);
+}
+
+.btn.btn-contratar:active {
+    -webkit-box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.88); 
+    box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.88);
+}
+
+/* Menu Digital */
+.jumbotron-menudigital {
+    background:
+    linear-gradient(308deg, rgba(25, 44, 75, 0.8) 0%, rgba(85, 124, 45, 0.8) 100%),
+        url( "../img/parallax-menudigital.webp" );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#menudigital {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+#menudigital > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#menudigital > .container:nth-child( 2 ) {
+    margin-top: -10%;
+}
+
+#menudigital > .container img {
+    width: 62%;
+    height: auto;
+}
+
+#menudigital > .container > .menudigital-caption {
+    padding: 2rem;
+}
+
+#menudigital > .container > .menudigital-caption h1 {
+    text-align: center;
+}
+
+#menudigital > .container > .menudigital-caption p {
+    font-size: 1.2rem;
+}
+
+#menudigital > .container > .btn.btn-contratar {
+    text-align: center;
+    width: 12rem;
+}
+
+/* Contacto */
+.jumbotron-contacto {
+    background:
+    linear-gradient(308deg, rgba(25, 44, 75, 0.8) 0%, rgba(85, 124, 45, 0.8) 100%),
+        url( "../img/parallax-contacto.webp" );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+#contacto > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#contacto > .container > div#c40 {
+    width: 80vw;
+    max-width: 800px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    width: 100%;
+    background-color: var( --color-dark );
+    color: var( --color-clear );
+}
+
+footer > .container {
+    padding: 2rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+footer > .container > img {
+    width: 50%;
+    max-width: 200px;
+}
+
+footer > .container > .footer-division {
+    border-bottom: 1px solid #FFF;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer > .container > .footer-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+footer > .container > .footer-group > .footer-block-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .container > .footer-group > .footer-block-1 > * {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+footer > .container > .footer-group > .footer-division {
+    border-bottom: 1px solid #FFF;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer > .container > .footer-group > .footer-block-2 > img {
+    width: 48px;
+    height: auto;
+    fill: var( --color-clear );
+}

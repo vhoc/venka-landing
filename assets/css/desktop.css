@@ -1,0 +1,314 @@
+@media only screen and ( min-width: 768px ) {
+    /* Nav */
+    button.hamburger {
+         display: none;
+    }
+ 
+    .nav-menu {
+         flex-direction: row;
+         position: unset;
+         left: unset;
+         top: unset;
+         justify-content: flex-end;
+    }
+ 
+    .nav-item {
+         width: unset;
+         margin-left: 1rem;
+         margin-right: 1rem;
+    }
+ 
+    .nav-item:hover {
+         background-color: unset;
+     }
+ 
+    .nav-item:hover > a {
+        color: var( --color-secondary );
+    }
+
+    /* Hero */
+    #hero > .container {
+        flex-direction: row-reverse;
+        background-image: url( "../img/jumbotron.webp" );
+    }
+
+    #intro {
+        margin-top: -48%;
+        max-width: 1300px;
+        min-height: 768px;
+    }
+
+    .hero-content {
+        flex-direction: row;
+        align-items: unset;
+    }
+
+    .hero-phone {
+        display: unset;
+        margin-left: 5rem;
+        width: 40%;
+        height: auto;
+        max-width: 400px;
+        animation: bounce 3s infinite alternate;
+    }
+
+    .hero-phone-mobile {
+        display: none;
+    }
+
+    .hero-column-phone {
+        order: unset;
+        justify-content: unset;
+        text-align: unset;
+    }
+
+    .hero-column-captions {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .hero-caption-top {
+        color: white;
+        /*margin-right: 10%;*/
+        margin-left: 3rem;
+        margin-right: 3rem;
+        order: unset;
+        text-align: unset;
+        padding-bottom: unset;
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    .hero-caption-top h1 {
+        text-shadow: 1px 1px 10px #000;
+        font-size: 2.6rem;
+        margin-bottom: 5%;
+    }
+
+    .hero-caption-top span {      
+        font-size: 1.3rem;
+    }
+
+    .hero-content .hero-caption-bottom {
+        text-align: center;
+        display: block;
+        margin-right: 10%;
+        margin-left: 0;
+    }
+
+    .hero-caption-bottom-mobile {
+        display: none;
+        text-align: center;
+        order: unset;
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    .hero-caption-bottom-mobile img {
+        width: unset;
+    }
+    
+    .icono-informacion {
+        width: 30%;
+    }
+    
+    .hero-content .hero-phone-caption {
+        margin-right: unset;
+        margin-left: unset;
+    }
+
+    /* Informacion */
+    #informacion {
+        background-image: url( "../img/info-background.svg" );
+        background-repeat: repeat-y;
+        background-size: contain;
+        animation: infoBackground 120s linear infinite;
+    }
+
+    .info {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: unset;
+        max-width: 1300px;
+    }
+
+    .info-venka {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-venka > p {
+        text-align: center;
+        font-size: 1.3rem;
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+
+    .info-controlperiodos {
+        align-items: center;
+    }
+
+    .info:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .info-venka > div,
+    .info-resumenempresas > div,
+    .info-resumensucursal > div,
+    .info-detallesucursal > div,
+    .info-detallespagoarea > div {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .info-resumenempresas > div:nth-child(even),
+    .info-resumensucursal > div:nth-child(even),
+    .info-detallesucursal > div:nth-child(even),
+    .info-detallespagoarea > div:nth-child(even) {
+        margin-right: 5%;
+    }
+
+    .info .info-images {
+        width: 50%;
+        max-width: 450px;
+    } 
+    
+
+    /* Precios */
+    #precios {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #precios > .container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        max-width: 1200px;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    #precios > .container > .paquete {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #precios > .container > .paquete > .paquete-body {
+        height: 360px;
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #precios > .container > .paquete > .paquete-body > div.paquete-accion {
+        margin-top: auto;
+    }
+
+    /* Menu Digital */
+    #menudigital {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #menudigital > .container {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;/* Cambiar a wrap */
+        width: 85%;
+        max-width: 1200px;
+    }
+
+    #menudigital > .container > img:nth-child( 1 ) {
+        width: 28%;
+    }
+
+    #menudigital > .container > img:nth-child( 2 ) {
+        width: 72%;
+    }
+
+    #menudigital > .container > .btn.btn-contratar {
+        background: var( --gradient-primary );
+        color: white;
+        border: unset;
+        border-radius: unset;
+        border-radius: 20%/50%;
+        text-align: center;
+        line-height: 3.5rem;
+        width: 15rem;
+        height: 5rem;
+    }
+
+    /* Contacto */
+
+
+    /* Footer */
+    footer > .container {
+        flex-direction: row;
+    }
+
+    footer > .container > .footer-division {
+        width: 1px;
+        height: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border: unset;
+        border-left: 1px solid var( --color-clear );
+    }
+
+    footer > .container > .footer-group {
+        flex-direction: row;
+        height: 100%;
+    }
+
+    footer > .container > .footer-group > .footer-division {
+        width: 1px;
+        height: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border: unset;
+        border-left: 1px solid var( --color-clear );
+    }
+
+    footer > .container > .footer-group > .footer-block-2 {
+        display: flex;
+    }
+ 
+ 
+ }
+
+@keyframes bounce {
+    from {
+      transform: rotate( -15deg ) translateY(0px);
+    }
+    to {
+      transform: rotate( -15deg ) translateY(-20px);
+    }
+}
+
+@-webkit-keyframes bounce {
+    from {
+      transform: rotate( -15deg ) translateY(0px);
+    }
+    to {
+      transform: rotate( -15deg ) translateY(-20px);
+    }
+}
+
+@keyframes infoBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 100%;
+    }
+}
